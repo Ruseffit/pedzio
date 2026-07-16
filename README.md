@@ -253,7 +253,7 @@ Checklist:
 
 ---
 
-## Estructura de archivos generados
+## Estructura de archivos (no actualizado)
 
 ```
 backend/public_html/api/
