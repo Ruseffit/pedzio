@@ -1,0 +1,24 @@
+:root {
+    --pedzio-color-primario: #E85D2C;
+    --pedzio-color-primario-claro: #FF8C42;
+    --pedzio-color-primario-suave: #FDEDE3;
+    --pedzio-color-secundario: #16213E;
+    --pedzio-color-blanco: #FFFFFF;
+    --pedzio-color-gris-claro: #F5F6F8;
+    --pedzio-color-gris-medio: #C7CBD1;
+    --pedzio-color-borde: #E7E9EC;
+    --pedzio-color-texto: #202634;
+    --pedzio-color-exito: #2E7D32;
+    --pedzio-color-exito-suave: #E8F5E9;
+    --pedzio-color-error: #C62828;
+    --pedzio-color-error-suave: #FDECEA;
+    --pedzio-color-info: #1565C0;
+    --pedzio-color-info-suave: #E3F2FD;
+    --pedzio-color-morado: #6A3FA0;
+    --pedzio-color-morado-suave: #F1E9F9;
+    --pedzio-fuente: 'Poppins', system-ui, sans-serif;
+    --pedzio-radio: 10px;
+    --pedzio-radio-chico: 6px;
+    --pedzio-sombra: 0 2px 10px rgba(22, 33, 62, 0.06);
+    --pedzio-sidebar-ancho: 240px;
+}

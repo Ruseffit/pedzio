@@ -1,0 +1,159 @@
+/* Navbar (paginas publicas: landing, login, registro, y rol cliente) */
+.pedzio-navbar {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--pedzio-color-blanco);
+    border-bottom: 1px solid var(--pedzio-color-borde);
+    padding: 14px 32px; flex-wrap: wrap; gap: 12px;
+}
+.pedzio-navbar__marca { display: flex; align-items: center; }
+.pedzio-navbar__marca img { height: 34px; display: block; }
+.pedzio-navbar__enlaces { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+.pedzio-navbar__enlaces a { color: var(--pedzio-color-secundario); font-weight: 500; }
+.pedzio-navbar__usuario { display: flex; align-items: center; gap: 14px; color: var(--pedzio-color-secundario); }
+.pedzio-navbar__usuario > * + * { margin-left: 2px; } /* respaldo si el motor no soporta flex-gap */
+.pedzio-navbar__usuario a { color: var(--pedzio-color-primario); }
+.pedzio-navbar__enlace-login { font-weight: 600; padding: 8px 4px; }
+.pedzio-btn--chico { padding: 8px 16px; font-size: 0.88rem; }
+
+/* ===================================================== */
+/* Layout de panel interno (emprendedor / superadmin)     */
+/* Sidebar fijo + topbar + contenido                      */
+/* ===================================================== */
+.pedzio-app { display: flex; min-height: calc(100vh - 60px); align-items: stretch; }
+
+.pedzio-app__sidebar {
+    width: var(--pedzio-sidebar-ancho); flex-shrink: 0;
+    background: var(--pedzio-color-blanco);
+    border-right: 1px solid var(--pedzio-color-borde);
+    padding: 20px 0;
+}
+.pedzio-app__logo { padding: 0 20px 20px; }
+.pedzio-app__logo img { max-width: 100%; height: auto; }
+
+.pedzio-app__nav { display: flex; flex-direction: column; gap: 2px; padding: 0 12px; }
+.pedzio-app__nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; border-radius: var(--pedzio-radio);
+    color: var(--pedzio-color-texto); font-weight: 500; font-size: 0.95rem;
+}
+.pedzio-app__nav-item:hover { background: var(--pedzio-color-gris-claro); text-decoration: none; }
+.pedzio-app__nav-item--activo {
+    background: var(--pedzio-color-primario-suave);
+    color: var(--pedzio-color-primario);
+    font-weight: 700;
+}
+.pedzio-app__nav-item--activo:hover { background: var(--pedzio-color-primario-suave); }
+
+.pedzio-app__main { flex: 1; min-width: 0; background: var(--pedzio-color-gris-claro); }
+
+.pedzio-app__topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--pedzio-color-blanco);
+    border-bottom: 1px solid var(--pedzio-color-borde);
+    padding: 18px 32px; flex-wrap: wrap; gap: 12px;
+}
+.pedzio-app__eyebrow { color: var(--pedzio-color-primario); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.pedzio-app__topbar h1 { margin: 2px 0 0; font-size: 1.5rem; }
+
+.pedzio-app__usuario { display: flex; align-items: center; gap: 10px; }
+.pedzio-app__usuario strong { color: var(--pedzio-color-secundario); font-size: 0.9rem; }
+.pedzio-app__usuario a { font-size: 0.82rem; color: var(--pedzio-color-primario); }
+.pedzio-app__avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--pedzio-color-primario); color: var(--pedzio-color-blanco);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1rem; flex-shrink: 0;
+}
+
+.pedzio-app__content { padding: 24px 32px; }
+
+/* Fila de tarjetas KPI (Ventas Hoy, Nuevos Pedidos, etc.) */
+.pedzio-kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.pedzio-kpi-card {
+    background: var(--pedzio-color-blanco); border-radius: var(--pedzio-radio);
+    box-shadow: var(--pedzio-sombra); padding: 16px 18px;
+    display: flex; align-items: center; gap: 14px;
+}
+.pedzio-kpi-card__icono {
+    width: 44px; height: 44px; border-radius: var(--pedzio-radio);
+    background: var(--pedzio-color-primario-suave); color: var(--pedzio-color-primario);
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+}
+.pedzio-kpi-card__texto p { margin: 0; font-size: 0.82rem; color: var(--pedzio-color-gris-medio); }
+.pedzio-kpi-card__texto strong { font-size: 1.25rem; color: var(--pedzio-color-secundario); }
+
+/* Paneles de contenido dentro del área de trabajo */
+.pedzio-panel {
+    background: var(--pedzio-color-blanco); border-radius: var(--pedzio-radio);
+    box-shadow: var(--pedzio-sombra); padding: 20px 24px; margin-bottom: 24px;
+}
+.pedzio-panel h2 { font-size: 1.05rem; margin-bottom: 14px; }
+
+/* Badges de estado de pedido */
+.pedzio-badge {
+    display: inline-block; padding: 4px 12px; border-radius: 20px;
+    font-size: 0.8rem; font-weight: 600;
+}
+.pedzio-badge--pendiente { background: #FFF3E0; color: #E65100; }
+.pedzio-badge--confirmado { background: var(--pedzio-color-info-suave); color: var(--pedzio-color-info); }
+.pedzio-badge--preparacion { background: var(--pedzio-color-morado-suave); color: var(--pedzio-color-morado); }
+.pedzio-badge--camino { background: #E0F7FA; color: #00838F; }
+.pedzio-badge--entregado { background: var(--pedzio-color-exito-suave); color: var(--pedzio-color-exito); }
+.pedzio-badge--cancelado { background: var(--pedzio-color-error-suave); color: var(--pedzio-color-error); }
+
+@media (max-width: 900px) {
+    .pedzio-app { flex-direction: column; }
+    .pedzio-app__sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--pedzio-color-borde); }
+    .pedzio-app__nav { flex-direction: row; overflow-x: auto; padding: 0 12px 8px; }
+    .pedzio-app__content { padding: 18px 16px; }
+    .pedzio-app__topbar { padding: 14px 16px; }
+}
+
+/* Botones */
+.pedzio-btn {
+    display: inline-block; padding: 10px 18px; border: none; border-radius: var(--pedzio-radio);
+    font-family: var(--pedzio-fuente); font-size: 0.95rem; cursor: pointer; text-decoration: none;
+}
+.pedzio-btn--primario { background: var(--pedzio-color-primario); color: var(--pedzio-color-blanco); }
+.pedzio-btn--secundario { background: var(--pedzio-color-secundario); color: var(--pedzio-color-blanco); }
+.pedzio-btn--peligro { background: var(--pedzio-color-error); color: var(--pedzio-color-blanco); }
+.pedzio-btn:hover { opacity: 0.9; text-decoration: none; }
+
+/* Cards / grid */
+.pedzio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+.pedzio-card {
+    background: var(--pedzio-color-blanco); border-radius: var(--pedzio-radio);
+    padding: 18px; box-shadow: var(--pedzio-sombra);
+}
+.pedzio-card h3 { font-size: 1rem; color: var(--pedzio-color-secundario); }
+.pedzio-card p { font-size: 1.4rem; font-weight: 700; color: var(--pedzio-color-primario); }
+
+/* Formularios */
+.pedzio-form { display: flex; flex-direction: column; gap: 8px; max-width: 480px; margin-top: 16px; }
+.pedzio-form label { font-weight: 600; font-size: 0.9rem; }
+.pedzio-form input, .pedzio-form select, .pedzio-form textarea {
+    padding: 10px; border: 1px solid var(--pedzio-color-gris-medio); border-radius: var(--pedzio-radio);
+    font-family: var(--pedzio-fuente);
+}
+
+/* Tabla */
+.pedzio-tabla { width: 100%; border-collapse: collapse; background: var(--pedzio-color-blanco); margin-top: 16px; }
+.pedzio-tabla th, .pedzio-tabla td { padding: 10px 12px; border-bottom: 1px solid var(--pedzio-color-gris-claro); text-align: left; }
+.pedzio-tabla th { background: var(--pedzio-color-secundario); color: var(--pedzio-color-blanco); }
+
+/* Hero / landing */
+.pedzio-hero { text-align: center; padding: 48px 16px; }
+.pedzio-hero h1 { font-size: 2.4rem; color: var(--pedzio-color-primario); }
+.pedzio-hero .pedzio-btn { margin: 6px; }
+
+/* Chips (filtros de catálogo) */
+.pedzio-chip {
+    display: inline-block; padding: 8px 14px; border-radius: 20px;
+    background: var(--pedzio-color-blanco); border: 1px solid var(--pedzio-color-gris-medio);
+    margin: 4px 6px 12px 0;
+}
+.pedzio-chip--activo { background: var(--pedzio-color-primario); color: var(--pedzio-color-blanco); border-color: var(--pedzio-color-primario); }
+
+.pedzio-total { font-size: 1.2rem; font-weight: 700; margin: 12px 0; }
+.pedzio-lista { list-style: none; }
+.pedzio-lista li { padding: 8px 0; border-bottom: 1px solid var(--pedzio-color-gris-claro); }

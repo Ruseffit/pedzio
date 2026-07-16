@@ -1,0 +1,17 @@
+# Dependencias
+backend/vendor/
+frontend/node_modules/
+
+# Variables de entorno con credenciales reales (nunca subir a git)
+backend/.env
+frontend/.env.local
+frontend/.env.production.local
+
+# Build de Next.js
+frontend/.next/
+frontend/out/
+
+# Logs y archivos de sistema
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+# Bloquea el acceso directo por URL a los comprobantes de pago.
+# Solo se pueden servir a través de un script PHP validado (ver_comprobante.php),
+# nunca directamente como archivo estático.
+Require all denied

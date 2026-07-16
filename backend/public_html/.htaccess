@@ -1,0 +1,27 @@
+# =====================================================
+# Pedzio - .htaccess de public_html/
+# =====================================================
+
+# Oculta información del servidor
+ServerSignature Off
+
+# Evita listado de directorios
+Options -Indexes
+
+# Fuerza HTTPS (descomenta si tu hosting ya tiene certificado SSL activo)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Bloquea el acceso directo a archivos de configuración si accidentalmente
+# quedaran dentro de public_html/ (defensa en profundidad).
+<FilesMatch "\.(env|sql|md)$">
+    Require all denied
+</FilesMatch>
+
+# Cabeceras básicas de seguridad
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
