@@ -23,7 +23,8 @@ npm --version      # 9.x.x
 
 ---
 
-## Paso 1 — Importar la base de datos
+## Paso 1 
+— Importar la base de datos
 
 1. Abre XAMPP Control Panel y arranca **Apache** y **MySQL**.
 2. Abre `http://localhost/phpmyadmin` en el navegador.
@@ -34,7 +35,8 @@ npm --version      # 9.x.x
 
 ---
 
-## Paso 2 — Configurar el backend (.env)
+## Paso 2 
+— Configurar el backend (.env)
 
 Abre `backend/.env` y ajusta tus credenciales de MySQL:
 
@@ -58,7 +60,8 @@ UPLOADS_MAX_MB=5
 
 ---
 
-## Paso 3 — Correr el backend PHP
+## Paso 3 
+— Correr el backend PHP
 
 **Opción A — PHP built-in server (recomendado para desarrollo):**
 
